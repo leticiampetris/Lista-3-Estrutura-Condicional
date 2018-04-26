@@ -19,6 +19,10 @@ public class Lista3Ex4{
 
         int somaAno = 0;
 
+        int letraA = 0;
+
+        int letraG = 0;
+
         while (contaCarros < quantidade) {
             modelo = JOptionPane.showInputDialog("Digite o modelo:");
             valor = Double.parseDouble(JOptionPane.showInputDialog("Informe o valor do carro:"));
@@ -26,14 +30,27 @@ public class Lista3Ex4{
             contaCarros = contaCarros + 1;
             somaAno = somaAno + ano;
             somaValor = somaValor + valor;
+            char letra = modelo.charAt(0);
+            letra = Character.toLowerCase(letra);
+
+            if (letra == 'g') {
+                letraG = letraG + 1;
+            } else if (letra == 'a') {
+                letraA = letraA + 1;
+            }
         }
 
-        Double mediaAno = (double) (somaAno / quantidade);
+        double mediaAno =  ((double)somaAno / quantidade);
 
-        Double mediaValor = somaValor / quantidade;
+        double mediaValor = somaValor / quantidade;
         
         JOptionPane.showMessageDialog(null, "Ano médio dos carros: " + mediaAno +
-                                            "\nValor médio dos carros: " + mediaValor);
+                                            "\nValor médio dos carros: " + mediaValor +
+                                            "\nQuantidade de Carros que começam com a letra \"G\": " +
+                                            letraG +
+                                            "\nQuantidade de Carros que começam com a letra \"A\": " +
+                                            letraA);
+
 
     }
 }
