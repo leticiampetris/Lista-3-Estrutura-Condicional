@@ -16,8 +16,48 @@ public class Lista3Ex7{
         int amarelos = 0;
         int vermelhos = 0;
 
-        sexo = JOptionPane.showInputDialog(null, "Selecione o sexo:", null, JOptionPane.QUESTION_MESSAGE, null,
-                                        new Object [] {"Masculino", "Feminino"}, "Masculino").toString();
+        String comMenorPeso = "";
+        double menorPeso = 100000;
+        String comMaiorAltura = "";
+        double maiorAltura = 0;
+        String comMaiorNome = "";
+        int tamanhoMaiorNome = 0;
+        int mulheres = 0;
+        int homens = 0;
+        String comMenosAmarelos = "";
+        int menosAmarelos = 100000;
+        String comMenorNome = "";
+        int tamanhoMenorNome = 100000;
+        String comMaiorPeso = "";
+        double maiorPeso = 0;        
+        String comMaisVermelhos = "";
+        int maisVermelhos = 0;        
+        String comMaisAmarelos = "";
+        int maisAmarelos = 0;        
+        String comMenosVermelhos = "";
+        int menosVermelhos = 100000;
+
+        while (restante > 0) {
+            restante = restante - 1;
+            nome = JOptionPane.showInputDialog("Nome:");
+            idade = Integer.parseInt(JOptionPane.showInputDialog("Idade:"));
+            peso = Double.parseDouble(JOptionPane.showInputDialog("Peso:"));
+            sexo = JOptionPane.showInputDialog(null, "Sexo:", null, JOptionPane.QUESTION_MESSAGE,
+                                        null, new Object [] {"Masculino", "Feminino"},
+                                        "Masculino").toString();
+            altura = Double.parseDouble(JOptionPane.showInputDialog("Altura:"));
+            gols = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de gols marcados:"));
+            amarelos = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de cartões amarelos:"));
+            vermelhos = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de cartões vermelhos:"));
+
+            if (idade < menorIdade) {
+                menorIdade = 
+            }
+            
+
+        }
+
+        
 
 
     
